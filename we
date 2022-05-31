@@ -1,0 +1,25 @@
+namespace WindowsFormsApp2
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "Admin" && textBox2.Text == "Qwerty")
+            {
+                Form1.ActiveForm.Hide();
+                Form2 MyForm2 = new Form2();
+                MyForm2.ShowDialog();
+                Close();
+            }
+            else
+            {
+                MessageBox.Show("Логин или пароль неверны", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
+}
